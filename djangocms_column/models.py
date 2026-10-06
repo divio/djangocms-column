@@ -4,6 +4,7 @@ from django.utils.translation import gettext_lazy as _
 
 from cms.models import CMSPlugin
 
+
 if hasattr(settings, "COLUMN_WIDTH_CHOICES"):
     WIDTH_CHOICES = settings.COLUMN_WIDTH_CHOICES
 else:

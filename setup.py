@@ -5,6 +5,7 @@ from setuptools import setup
 
 from djangocms_column import __version__
 
+
 INSTALL_REQUIRES = [
     'django-cms>=3.8.0',
     'Django>=2.2'  # the maximum version should be dictated by the cms
