@@ -1,0 +1,51 @@
+[tool.ruff]
+line-length = 119
+extend-exclude = [
+  "**/migrations/**",
+  ".env",
+  "data",
+  "tmp",
+  "docs",
+]
+
+[tool.ruff.lint]
+select = [
+  "E",
+  "W",
+  "F",
+  "I",
+  "A",
+  "B",
+  "C4",
+  "COM",
+  "ERA",
+  "N",
+  "Q",
+  "TID",
+]
+ignore = [
+  "A003",  # builtin attribute shadowing
+  "B009",  # getattr with constant
+  "B010",  # setattr with constant
+  "C408",  # unnecessary dict/list/tuple call
+  "COM812",  # missing trailing comma
+  "E501",  # line too long
+  "ERA001",  # commented-out code
+  "Q000",  # bad quotes inline string
+]
+
+[tool.ruff.lint.isort]
+combine-as-imports = true
+known-first-party = ["djangocms_column"]
+lines-after-imports = 2
+section-order = [
+  "future",
+  "standard-library",
+  "django",
+  "third-party",
+  "first-party",
+  "local-folder",
+]
+
+[tool.ruff.lint.isort.sections]
+django = ["django"]
